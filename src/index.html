@@ -5,30 +5,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous" />
   <title>test</title>
 </head>
 
 <body>
-  <div class="timer" id="timer-1">
-    <div class="field">
-      <span class="value" data-value="days">11</span>
-      <span class="label">Days</span>
-    </div>
+  <div class="container">
+    <div class="timer" id="timer-1">
+      <div class="flip-clock flip-clock-day">
+        <div class="value value-day" data-value="days" data-digit-before="210" data-digit-after="211">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-face-front">210</div>
+            <div class="card-face card-face-back">211</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <span class="label">Days</span>
+      </div>
 
-    <div class="field">
-      <span class="value" data-value="hours">11</span>
-      <span class="label">Hours</span>
+      <div class="colon">:</div>
+      <div class="flip-clock flip-clock-hour">
+        <div class="value" data-value="hour" data-digit-before="21" data-digit-after="22">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-face-front">21</div>
+            <div class="card-face card-face-back">22</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <span class="label">Hours</span>
+      </div>
+      <div class="colon">:</div>
+      <div class="flip-clock flip-clock-min">
+        <div class="value" data-value="min" data-digit-before="21" data-digit-after="22">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-face-front">21</div>
+            <div class="card-face card-face-back">22</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="colon">:</div>
+      <div class="flip-clock flip-clock-sec">
+        <div class="value" data-value="sec" data-digit-before="21" data-digit-after="22">
+          <!-- ::before -->
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-face-front">21</div>
+            <div class="card-face card-face-back">22</div>
+          </div>
+          <!-- ::after -->
+        </div>
+        <span class="label">Seconds</span>
+      </div>
     </div>
-
-    <div class="field">
-      <span class="value" data-value="mins">11</span>
-      <span class="label">Minutes</span>
-    </div>
-
-    <div class="field">
-      <span class="value" data-value="secs">11</span>
-      <span class="label">Seconds</span>
-    </div>
+  </div>
   </div>
 </body>
 

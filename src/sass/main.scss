@@ -1,6 +1,4 @@
-.timer{
-  display: flex;
-}
-.field+.field{
-margin-left: 10px;
-}
+@import './utils/breakpoints';
+@import './base/globalClass';
+@import './base/reset';
+@import './layout/timer';
